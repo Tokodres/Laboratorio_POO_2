@@ -14,44 +14,52 @@ public class Calculos {
 	
 	
 	public void menu() {
-		
-		String c;
 		int opc = 0;
-		c = "//////////CALCULADORA////////// \n";
-		c += "1. Sumar \n";
-		c += "2. Restar \n";
-		c += "3. Multiplicacion \n";
-		c += "4. Division \n";
-		c += "5. Factorial \n";
-		c += "6. Potencia \n";
-		c += "7. Salir \n";
-		while(opc <1 || opc >7) {
-			opc = Integer.parseInt(JOptionPane.showInputDialog(c));
-		}
-		 
-				
+		do {
+			opc = 0;
+			
+			String c;
+			
+			while(opc <1 || opc >7) {
+			c = "//////////CALCULADORA////////// \n";
+			c += "1. Sumar \n";
+			c += "2. Restar \n";
+			c += "3. Multiplicacion \n";
+			c += "4. Division \n";
+			c += "5. Factorial \n";
+			c += "6. Potencia \n";
+			c += "7. Salir \n";
+			
+				opc = Integer.parseInt(JOptionPane.showInputDialog(c));
+			}
+			 
+					
+			
+			if(opc == 1) {
+				suma();
+			}
+			else if(opc == 2) {
+				resta();
+			}
+			else if(opc == 3) {
+				multiplicacion();
+			}
+			else if(opc == 4) {
+				division();
+			}
+			else if(opc == 5) {
+				factorial();
+			}
+			else if(opc == 6) {
+				potencia();
+			}
+			else {
+				System.exit(0);
+			}	
+			
+			
+		}while(opc !=6);
 		
-		if(opc == 1) {
-			suma();
-		}
-		else if(opc == 2) {
-			resta();
-		}
-		else if(opc == 3) {
-			multiplicacion();
-		}
-		else if(opc == 4) {
-			division();
-		}
-		else if(opc == 5) {
-			factorial();
-		}
-		else if(opc == 6) {
-			potencia();
-		}
-		else {
-			System.exit(0);
-		}
 		
 		
 		
